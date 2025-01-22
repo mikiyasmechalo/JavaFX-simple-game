@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #112222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.GameController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <center>
+            <AnchorPane fx:id="GameViewAnchor" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <HBox alignment="CENTER" prefHeight="36.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="69.0" text="Player:" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="playerNameLabel" minWidth="153.0" prefHeight="25.0" prefWidth="153.0" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="69.0" text="Health: " textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="healthLabel" prefHeight="17.0" prefWidth="73.0" text="0" textFill="WHITE" />
+                  <Label prefHeight="25.0" prefWidth="69.0" text="Score" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="scoreLabel" prefHeight="17.0" prefWidth="90.0" text="0" textFill="WHITE" />
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</VBox>

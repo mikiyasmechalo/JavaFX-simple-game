@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.miniGames.Door2Controller">
+   <children>
+      <VBox alignment="CENTER" style="-fx-background-color: #112222;">
+         <children>
+            <VBox fx:id="board1" alignment="TOP_CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Door2-1.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <TextArea editable="false" layoutX="-3.0" layoutY="249.0" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent; " text="The second door stands at the end of a precarious stone bridge suspended&#10;over a seemingly endless abyss. The door glows faintly with blue light,&#10;its surface smooth as glass and etched with a cryptic riddle:             &#10;   &#10;'Only those with knowledge and patience may pass.'">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Button fx:id="button1" mnemonicParsing="false" onMouseClicked="#hideBoard1" prefHeight="42.0" prefWidth="123.0" text="Next">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="board2" alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextArea editable="false" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent;" text="Beside the door, you find a stone tablet &#10;carved with symbols and words">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@images/stoneTablet.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button fx:id="button2" mnemonicParsing="false" onMouseClicked="#hideBoard2" prefHeight="42.0" prefWidth="123.0" text="Next">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="board3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
+               <children>
+                  <AnchorPane prefHeight="405.0" prefWidth="600.0">
+                     <children>
+                        <Button layoutX="60.0" layoutY="172.0" mnemonicParsing="false" onAction="#choicePressed" prefHeight="56.0" prefWidth="133.0" text="Rock" />
+                        <Button layoutX="234.0" layoutY="172.0" mnemonicParsing="false" onAction="#choicePressed" prefHeight="56.0" prefWidth="133.0" text="Paper" />
+                        <Button layoutX="400.0" layoutY="172.0" mnemonicParsing="false" onAction="#choicePressed" prefHeight="56.0" prefWidth="133.0" text="Scissor" />
+                        <Label fx:id="winnerLabel" layoutX="187.0" layoutY="257.0" prefHeight="56.0" prefWidth="239.0" text="Winner:" textFill="WHITE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="nextGameButton" layoutX="243.0" layoutY="327.0" mnemonicParsing="false" onAction="#toNextGame" prefHeight="49.0" prefWidth="114.0" text="Next Game" />
+                        <Label layoutX="44.0" layoutY="112.0" prefHeight="30.0" prefWidth="103.0" text="Player score: " textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="playerScoreLabel" layoutX="176.0" layoutY="112.0" prefHeight="30.0" prefWidth="74.0" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="computerScoreLabel" layoutX="459.0" layoutY="112.0" prefHeight="30.0" prefWidth="74.0" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="294.0" layoutY="112.0" prefHeight="30.0" prefWidth="133.0" text="Computer score: " textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

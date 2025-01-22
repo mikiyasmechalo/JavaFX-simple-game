@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" style="-fx-background-color: #112222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.MainController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="515.0" fitWidth="914.0" layoutX="-101.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/GptStart.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="startButton" layoutX="268.0" layoutY="356.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" text="Start">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="quitButton" layoutX="294.0" layoutY="447.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="113.0" text="Exit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

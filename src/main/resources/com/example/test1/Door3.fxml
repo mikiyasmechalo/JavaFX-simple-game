@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.miniGames.Door3Controller">
+   <children>
+       <VBox alignment="CENTER" style="-fx-background-color: #112222;">
+           <children>
+               <VBox fx:id="board1" alignment="TOP_CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                   <children>
+                       <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="@images/Door3.jpg" />
+                           </image>
+                           <VBox.margin>
+                               <Insets bottom="20.0" />
+                           </VBox.margin>
+                       </ImageView>
+                       <TextArea editable="false" layoutX="-3.0" layoutY="249.0" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent; " text="The third door is unlike the others. It is surrounded by a ring of mirrors&#10;that reflect not your true image, but warped, twisted versions of yourself.&#10;The reflections whisper taunts and warnings, their voices filling your head">
+                           <font>
+                               <Font size="16.0" />
+                           </font>
+                       </TextArea>
+                       <Button fx:id="button1" mnemonicParsing="false" onMouseClicked="#hideBoard1" prefHeight="42.0" prefWidth="123.0" text="Next">
+                           <font>
+                               <Font size="17.0" />
+                           </font>
+                           <VBox.margin>
+                               <Insets bottom="5.0" top="10.0" />
+                           </VBox.margin>
+                       </Button>
+                   </children>
+               </VBox>
+               <VBox fx:id="board2" alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                   <children>
+                       <TextArea editable="false" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent;" text="In the center of the door is a slot, perfectly shaped for a key, yet no  is present. Instead, &#10;a small glowing vial lies at the  base of the door.&#10;A deep voice resonates through the chamber: 'The key lies within the game&#10; of Scrambled words. Only the strong and persistent will succeed.'&#10;As the whispers grow louder, you steel yourself for the challenge.">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextArea>
+                       <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                               <Image url="@images/vail.png" />
+                           </image>
+                           <VBox.margin>
+                               <Insets bottom="20.0" />
+                           </VBox.margin>
+                       </ImageView>
+                       <Button fx:id="button2" mnemonicParsing="false" onMouseClicked="#hideBoard2" prefHeight="42.0" prefWidth="123.0" text="Next">
+                           <font>
+                               <Font size="17.0" />
+                           </font>
+                       </Button>
+                   </children>
+               </VBox>
+   
+               <VBox fx:id="board3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
+                   <children>
+                       <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                           <children>
+                               <Label alignment="CENTER" layoutX="41.0" layoutY="142.0" prefHeight="34.0" prefWidth="175.0" text="Word to unscramble" textFill="WHITE">
+                                   <font>
+                                       <Font name="System Bold" size="18.0" />
+                                   </font>
+                               </Label>
+                               <Label fx:id="wordToGuessLabel" alignment="CENTER" layoutX="42.0" layoutY="188.0" prefHeight="25.0" prefWidth="160.0" text="Label" textFill="WHITE">
+                                   <font>
+                                       <Font size="18.0" />
+                                   </font>
+                               </Label>
+                               <TextField fx:id="guessInput" alignment="CENTER" layoutX="243.0" layoutY="183.0" onKeyReleased="#takeGuess" prefHeight="34.0" prefWidth="232.0">
+                                   <font>
+                                       <Font size="14.0" />
+                                   </font>
+                               </TextField>
+                               <Label alignment="CENTER" contentDisplay="CENTER" layoutX="277.0" layoutY="142.0" prefHeight="34.0" prefWidth="169.0" text="Your Guess" textAlignment="CENTER" textFill="WHITE">
+                                   <font>
+                                       <Font name="System Bold" size="16.0" />
+                                   </font>
+                               </Label>
+                               <Button fx:id="enterGuessBtn" layoutX="292.0" layoutY="268.0" mnemonicParsing="false" onKeyReleased="#takeGuess" onMouseClicked="#takeGuess" prefHeight="34.0" prefWidth="134.0" style="-fx-background-color: #fffffc;" text="Enter">
+                                   <font>
+                                       <Font size="17.0" />
+                                   </font>
+                               </Button>
+                               <Label fx:id="resultLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="135.0" layoutY="328.0" prefHeight="48.0" prefWidth="309.0" textAlignment="CENTER" textFill="WHITE">
+                                   <font>
+                                       <Font size="16.0" />
+                                   </font>
+                                   <padding>
+                                       <Insets right="10.0" />
+                                   </padding>
+                               </Label>
+                        <Button fx:id="nextGameButton" layoutX="243.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToNextDoor" prefHeight="38.0" prefWidth="152.0" text="Continue" />
+                           </children>
+                       </AnchorPane>
+                   </children>
+               </VBox>
+           </children>
+       </VBox>
+   </children>
+</AnchorPane>

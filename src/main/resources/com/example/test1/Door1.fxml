@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.miniGames.Door1Controller">
+   <children>
+      <VBox alignment="CENTER" style="-fx-background-color: #112222;">
+         <children>
+            <VBox fx:id="board1" alignment="TOP_CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Door1.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <TextArea editable="false" layoutX="-3.0" layoutY="249.0" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent; " text="The first door is a massive stone slab, weathered and cracked with age.&#10; Carvings of ancient warriors battling shadowy monsters cover its surface.&#10;                &#10;As you approach, the air grows cold, and a ghostly figure materializes.&#10;                &#10; 'I am General Talen,' the figure declares. 'Many have tried and failed to &#10;open this door.&#10;Prove your worth through a game of Rock, Paper, Scissors, a battle of wits&#10; passed down from the ancients.'">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextArea>
+                  <Button mnemonicParsing="false" onMouseClicked="#hideBoard1" prefHeight="42.0" prefWidth="123.0" text="Next">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="board2" alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextArea editable="false" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent;" text="Before fading away, the figure hands you an amulet, its surface &#10;etched with runes that seem to hum with power.&#10;The carvings tell a story of a mighty king battling a dragon.">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </TextArea>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@images/Amulate.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onMouseClicked="#hideBoard2" prefHeight="42.0" prefWidth="123.0" text="Next">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox fx:id="board3">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #112222;">
+                     <children>
+                        <ImageView fx:id="hangmanImage" fitHeight="229.0" fitWidth="152.0" layoutX="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/hangman/Hangman1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="73.0" layoutY="309.0" prefHeight="30.0" prefWidth="205.0" text="Enter Your Guess Character:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="charInput" layoutX="301.0" layoutY="312.0" onAction="#guessMade" prefHeight="25.0" prefWidth="106.0" promptText="1 Character" />
+                        <Label layoutX="126.0" layoutY="253.0" prefHeight="30.0" prefWidth="152.0" text="Hangman Progress:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="hangmanProgress" layoutX="278.0" layoutY="253.0" prefHeight="30.0" prefWidth="152.0" text="_ _" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="result" layoutX="398.0" layoutY="88.0" prefHeight="110.0" prefWidth="173.0" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="428.0" layoutY="305.0" mnemonicParsing="false" onAction="#guessMade" prefHeight="40.0" prefWidth="92.0" text="Guess!" />
+                        <Button fx:id="nextGameButton" layoutX="250.0" layoutY="356.0" mnemonicParsing="false" onAction="#goToNextDoor" prefHeight="25.0" prefWidth="105.0" text="Go to next" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

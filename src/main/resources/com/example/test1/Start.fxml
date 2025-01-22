@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--        fx:controller="com.example.test1.Start"-->
+
+<VBox alignment="CENTER" style="-fx-background-color: #10101f;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.StartQuestController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #10101f;">
+         <children>
+            <TextArea editable="false" layoutX="59.0" layoutY="43.0" prefHeight="227.0" prefWidth="583.0" style="-fx-background-color: #111;" text="&quot;You are King Solomon, a ruler of great wisdom and power. Yet, even kings are not immune &#10;to sorrow. Your beloved daughter, Princess Shiba, lies gravely ill.&#10;                &#10;A wise sage has revealed that a single bloom from the mystical Heart-flower, nestled within &#10;the lair of the ancient dragon, Zarathor, atop the perilous Mountain of Shadows, known as &#10;Mystical Dashen, holds the key to her recovery.&#10;                &#10;Beware, for the mountain is not merely perilous; it is cursed, Multiple Doors sealed by generations &#10;past to contain a monstrous evil. A daunting quest awaits you, noble king. Will you be to dare go  &#10;into the unknown, confront the DRAGON, and claim the flower to save your daughter?">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="acceptButton" layoutX="181.0" layoutY="303.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="339.0" style="-fx-background-color: #111aaa;" text="Accept Challange" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" layoutX="272.0" layoutY="381.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="157.0" text="QUIT">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
